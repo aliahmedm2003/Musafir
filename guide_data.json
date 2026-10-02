@@ -1,0 +1,206 @@
+{
+  "Hunza": {
+    "name": "Hunza Valley",
+    "lat": 36.31,
+    "lng": 74.19,
+    "best_season": "May-October",
+    "worst_season": "November-April (heavy snow)",
+    "food_per_meal": {"usd": 3, "pkr": 750},
+    "accommodation": {
+      "budget": {"name": "Guest Houses", "price_usd": 15, "price_pkr": 3750},
+      "mid_range": {"name": "Hotels", "price_usd": 40, "price_pkr": 10000},
+      "luxury": {"name": "Resorts", "price_usd": 80, "price_pkr": 20000}
+    },
+    "activities": [
+      "Trekking to Khunjerab Pass (China border)",
+      "Visit Attabad Lake",
+      "Explore apricot orchards",
+      "Photography at Eagle's Nest",
+      "Cultural tours with local guides"
+    ],
+    "group_discounts": {
+      "4-6 people": "10% off accommodation",
+      "7-10 people": "15% off",
+      "2+ weeks": "20% discount on guides"
+    },
+    "restaurants": [
+      {"name": "Mama's Kitchen", "price_pkr": 800, "gps": "36.31, 74.19"},
+      {"name": "Hunza Trout House", "price_pkr": 600, "gps": "36.30, 74.20"}
+    ],
+    "safety_tips": "Roads are narrow but well maintained. Guides mandatory for high altitude. Water is pure from glaciers.",
+    "scam_warnings": "Avoid unlicensed guides. Always use registered hotels. Don't carry large cash."
+  },
+  "Skardu": {
+    "name": "Skardu",
+    "lat": 35.30,
+    "lng": 75.57,
+    "best_season": "May-September",
+    "worst_season": "November-March (roads close)",
+    "food_per_meal": {"usd": 3, "pkr": 750},
+    "accommodation": {
+      "budget": {"name": "Budget Hotels", "price_usd": 12, "price_pkr": 3000},
+      "mid_range": {"name": "Mid Hotels", "price_usd": 35, "price_pkr": 8750},
+      "luxury": {"name": "Luxury Resorts", "price_usd": 70, "price_pkr": 17500}
+    },
+    "activities": [
+      "Trekking to K2 Base Camp",
+      "Deosai Plains trek",
+      "Shigar Fort visit",
+      "Fishing in glacial lakes",
+      "Polo matches (summer)"
+    ],
+    "group_discounts": {
+      "5+ people": "12% off guides",
+      "3+ weeks": "25% off accommodation"
+    },
+    "restaurants": [
+      {"name": "Skardu Palace", "price_pkr": 900, "gps": "35.30, 75.57"}
+    ],
+    "safety_tips": "High altitude (2,228m). Acclimatize for 2 days. Guides essential for mountain treks.",
+    "scam_warnings": "Check trek permits. Verify guide credentials. Avoid off-season travel."
+  },
+  "Swat": {
+    "name": "Swat Valley",
+    "lat": 34.76,
+    "lng": 72.41,
+    "best_season": "April-October",
+    "worst_season": "December-February (cold)",
+    "food_per_meal": {"usd": 2.5, "pkr": 625},
+    "accommodation": {
+      "budget": {"name": "Guesthouses", "price_usd": 10, "price_pkr": 2500},
+      "mid_range": {"name": "Hotels", "price_usd": 30, "price_pkr": 7500},
+      "luxury": {"name": "Resorts", "price_usd": 60, "price_pkr": 15000}
+    },
+    "activities": [
+      "Trekking to Malam Jabba",
+      "White water rafting",
+      "Visit Butkara Stupa",
+      "Photography tours",
+      "Cultural heritage walks"
+    ],
+    "group_discounts": {
+      "3+ people": "8% off",
+      "10+ people": "15% off"
+    },
+    "restaurants": [
+      {"name": "Swat Kitchen", "price_pkr": 500, "gps": "34.76, 72.41"}
+    ],
+    "safety_tips": "Post-2009 valley is very safe. Roads are good. No permits needed.",
+    "scam_warnings": "Use registered guides. Hotels in main towns are reliable. Avoid empty areas at night."
+  },
+  "Fairy Meadows": {
+    "name": "Fairy Meadows",
+    "lat": 35.47,
+    "lng": 74.87,
+    "best_season": "July-August",
+    "worst_season": "September-June (snow)",
+    "food_per_meal": {"usd": 4, "pkr": 1000},
+    "accommodation": {
+      "budget": {"name": "Base camp tents", "price_usd": 20, "price_pkr": 5000},
+      "mid_range": {"name": "Lodges", "price_usd": 50, "price_pkr": 12500},
+      "luxury": {"name": "Premium camps", "price_usd": 100, "price_pkr": 25000}
+    },
+    "activities": [
+      "Nanga Parbat views",
+      "Alpine meadow trekking",
+      "Photography at sunrise",
+      "Mountaineering training"
+    ],
+    "group_discounts": {
+      "4+ climbers": "20% off",
+      "2+ weeks": "30% off total"
+    },
+    "restaurants": [
+      {"name": "Base Camp Cafe", "price_pkr": 700, "gps": "35.47, 74.87"}
+    ],
+    "safety_tips": "Altitude 4,000m. Acclimatize mandatory. Professional guides required. Porters available.",
+    "scam_warnings": "Book through registered agencies. Verify porter insurance. Check equipment quality."
+  },
+  "Tharparkar": {
+    "name": "Tharparkar Desert",
+    "lat": 24.80,
+    "lng": 71.50,
+    "best_season": "October-March",
+    "worst_season": "May-September (40°C+)",
+    "food_per_meal": {"usd": 2, "pkr": 500},
+    "accommodation": {
+      "budget": {"name": "Desert camps", "price_usd": 8, "price_pkr": 2000},
+      "mid_range": {"name": "Resort camps", "price_usd": 25, "price_pkr": 6250},
+      "luxury": {"name": "Luxury camps", "price_usd": 50, "price_pkr": 12500}
+    },
+    "activities": [
+      "Camel safari",
+      "Desert village tours",
+      "Kolhar Lake visit",
+      "Cultural immersion with Thari people",
+      "Stargazing (zero light pollution)"
+    ],
+    "group_discounts": {
+      "3+ days": "15% off camel safari",
+      "5+ people": "20% off camps"
+    },
+    "restaurants": [
+      {"name": "Desert Oasis", "price_pkr": 400, "gps": "24.80, 71.50"}
+    ],
+    "safety_tips": "Bring sun protection. Carry water always. Respect local customs. Roads are sandy.",
+    "scam_warnings": "Use established safari operators. Avoid unmarked roads. Don't travel alone."
+  },
+  "Chitral": {
+    "name": "Chitral",
+    "lat": 35.85,
+    "lng": 71.80,
+    "best_season": "May-September",
+    "worst_season": "October-April",
+    "food_per_meal": {"usd": 2.5, "pkr": 625},
+    "accommodation": {
+      "budget": {"name": "Guesthouses", "price_usd": 10, "price_pkr": 2500},
+      "mid_range": {"name": "Hotels", "price_usd": 28, "price_pkr": 7000},
+      "luxury": {"name": "Resorts", "price_usd": 55, "price_pkr": 13750}
+    },
+    "activities": [
+      "Kalash valleys visit",
+      "Tirich Mir trekking",
+      "Polo in summer",
+      "Cultural tours",
+      "Bird watching"
+    ],
+    "group_discounts": {
+      "4+ people": "10% off guides",
+      "Kalash tour package": "20% group rates"
+    },
+    "restaurants": [
+      {"name": "Chitral Palace", "price_pkr": 600, "gps": "35.85, 71.80"}
+    ],
+    "safety_tips": "Roads are mountain passages. Guides available. Respect Kalash traditions.",
+    "scam_warnings": "Don't overpay for guides. Check hotel reviews. Verify transportation before booking."
+  },
+  "Kalaam": {
+    "name": "Kalaam, Swat",
+    "lat": 34.52,
+    "lng": 72.39,
+    "best_season": "June-September",
+    "worst_season": "November-April (roads close)",
+    "food_per_meal": {"usd": 2, "pkr": 500},
+    "accommodation": {
+      "budget": {"name": "Huts", "price_usd": 12, "price_pkr": 3000},
+      "mid_range": {"name": "Lodges", "price_usd": 28, "price_pkr": 7000},
+      "luxury": {"name": "Resorts", "price_usd": 50, "price_pkr": 12500}
+    },
+    "activities": [
+      "Kacura Gali hiking",
+      "River fishing",
+      "Photography",
+      "Village tours",
+      "Strawberry picking (June)"
+    ],
+    "group_discounts": {
+      "3+ days": "10% off lodges",
+      "5+ people": "15% off"
+    },
+    "restaurants": [
+      {"name": "Mountain Breeze", "price_pkr": 450, "gps": "34.52, 72.39"}
+    ],
+    "safety_tips": "Valley is safe. Roads are winding but good. No special permits needed.",
+    "scam_warnings": "Book lodges in advance. Use recognized guides only. Check road conditions before visiting."
+  }
+}
