@@ -12,6 +12,7 @@ import json
 from datetime import datetime
 import uuid
 import os
+from pathlib import Path
 
 app = FastAPI()
 
@@ -23,11 +24,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DB_PATH = "musafir.db"
+# Use absolute paths
+BASE_DIR = Path(__file__).resolve().parent
+DB_PATH = BASE_DIR / "musafir.db"
+HTML_PATH = BASE_DIR / "index.html"
+JSON_PATH = BASE_DIR / "guide_data.json"
 
 def init_db():
     """Initialize all database tables."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     
     # Tourists table
@@ -87,8 +92,11 @@ init_db()
 
 def load_guide_data():
     """Load all location and business data."""
-    with open("guide_data.json", "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(str(JSON_PATH), "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
 
 def search_answer(question, region, guide_data):
     """Find answer from database based on question keywords."""
@@ -169,15 +177,18 @@ def favicon():
 @app.get("/")
 def root():
     """Serve main interface."""
-    with open("index.html", "r", encoding="utf-8") as f:
-        return HTMLResponse(content=f.read())
+    try:
+        with open(str(HTML_PATH), "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    except FileNotFoundError:
+        return HTMLResponse("<h1>App not found</h1>", status_code=404)
 
 @app.post("/api/tourist/register")
 def register_tourist(phone: str, region: str, interests: str):
     """Tourist registers to receive SMS."""
     tourist_id = str(uuid.uuid4())[:8]
     
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     try:
         cursor.execute(
@@ -199,7 +210,7 @@ def guide_query(question: str, region: str):
     answer = search_answer(question, region, guide_data)
     
     # Log query
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     cursor.execute(
         'INSERT INTO queries (tourist_id, question, region, answer, timestamp) VALUES (?, ?, ?, ?, ?)',
@@ -218,7 +229,7 @@ def guide_query(question: str, region: str):
 @app.post("/api/business/create-sms")
 def business_create_sms(business_name: str, message: str, target_region: str, cost_pkr: float = 5.0):
     """Business creates SMS marketing message (queues locally, sends when online)."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     
     # Get all tourist phones in target region
@@ -251,7 +262,7 @@ def business_create_sms(business_name: str, message: str, target_region: str, co
 @app.get("/api/sms/queue")
 def get_sms_queue():
     """Get pending SMS queue (for business to see what's ready to send)."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     cursor.execute('SELECT business_name, message, target_region, target_phones, cost_pkr FROM sms_queue WHERE sent = 0')
     queued = cursor.fetchall()
@@ -275,7 +286,7 @@ def get_sms_queue():
 @app.post("/api/sms/sync")
 def sync_sms():
     """Mark SMS as sent (simulates sending when internet returns)."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     cursor.execute('UPDATE sms_queue SET sent = 1 WHERE sent = 0')
     rows = cursor.rowcount
@@ -291,7 +302,7 @@ def sync_sms():
 @app.post("/api/gps/track")
 def track_guide(guide_id: str, guide_name: str, latitude: float, longitude: float):
     """Log guide's GPS location (works offline)."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     cursor.execute(
         'INSERT INTO gps_tracks (guide_id, guide_name, latitude, longitude, timestamp) VALUES (?, ?, ?, ?, ?)',
@@ -305,7 +316,7 @@ def track_guide(guide_id: str, guide_name: str, latitude: float, longitude: floa
 @app.get("/api/dashboard")
 def dashboard():
     """Business dashboard - see SMS sent, tourists registered, revenue."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(str(DB_PATH))
     cursor = conn.cursor()
     
     cursor.execute('SELECT COUNT(*) FROM tourists')
