@@ -101,6 +101,7 @@ def load_guide_data():
 def search_answer(question, region, guide_data):
     """Find answer from database based on question keywords."""
     question_lower = question.lower()
+    answer_parts = []
     
     # Search in location info
     if region in guide_data:
@@ -108,7 +109,7 @@ def search_answer(question, region, guide_data):
         
         # Scam/Safety questions
         if any(word in question_lower for word in ["scam", "safe", "danger", "watch out", "fraud", "careful", "warning"]):
-            return f"Safety in {region}:\n{region_data.get('safety_tips', 'Generally safe.')}\n\nScam warnings:\n{region_data.get('scam_warnings', 'Use registered services.')}"
+            answer_parts.append(f"Safety in {region}:\n{region_data.get('safety_tips', 'Generally safe.')}\n\nScam warnings:\n{region_data.get('scam_warnings', 'Use registered services.')}")
         
         # Price/cost/budget/sleep/accommodation questions
         if any(word in question_lower for word in ["price", "cost", "how much", "budget", "expensive", "cheap", "sleep", "stay", "accommodation", "hotel", "lodge"]):
@@ -121,35 +122,30 @@ def search_answer(question, region, guide_data):
             if "luxury" in accommodation:
                 answer += f"💰 Luxury: {accommodation['luxury']['price_usd']} USD/night\n"
             answer += f"\n🍽️ Food per meal: {region_data.get('food_per_meal', {}).get('usd', '?')} USD"
-            return answer
+            answer_parts.append(answer)
         
         # Best time/season questions
         if any(word in question_lower for word in ["best time", "season", "weather", "when", "visit", "month", "go", "should i"]):
-            return f"Season in {region}:\n✅ Best season: {region_data.get('best_season', 'varies')}\n❌ Worst season: {region_data.get('worst_season', 'varies')}"
+            answer_parts.append(f"Best Season in {region}:\n✅ Best: {region_data.get('best_season', 'varies')}\n❌ Worst: {region_data.get('worst_season', 'varies')}")
         
         # Activity/trekking/hiking questions
         if any(word in question_lower for word in ["activity", "do", "activities", "trek", "hike", "what to", "things to do", "explore", "trekking"]):
             activities = region_data.get("activities", [])
             if activities:
-                return f"Activities in {region}:\n" + "\n".join([f"• {a}" for a in activities[:5]])
+                answer_parts.append(f"Activities in {region}:\n" + "\n".join([f"• {a}" for a in activities[:5]]))
         
         # Discount questions
-        if any(word in question_lower for word in ["discount", "group", "week", "long", "bulk", "offer", "deal", "cheap", "rate"]):
+        if any(word in question_lower for word in ["discount", "group", "week", "long", "bulk", "offer", "deal", "rate"]):
             discounts = region_data.get("group_discounts", {})
             if discounts:
                 answer = f"Discounts in {region}:\n"
                 for discount, details in discounts.items():
                     answer += f"• {discount}: {details}\n"
-                return answer
-            else:
-                # Fallback to pricing if no specific discounts
-                accommodation = region_data.get("accommodation", {})
-                answer = f"Rates in {region}:\n"
-                if "budget" in accommodation:
-                    answer += f"Budget: {accommodation['budget']['price_usd']} USD/night\n"
-                if "mid_range" in accommodation:
-                    answer += f"Mid-range: {accommodation['mid_range']['price_usd']} USD/night\n"
-                return answer
+                answer_parts.append(answer)
+        
+        # If we found answers, return them all
+        if answer_parts:
+            return "\n\n".join(answer_parts)
     
     # If asking to COMPARE multiple regions
     if any(word in question_lower for word in ["vs", "better", "compare", "which", "both"]):
