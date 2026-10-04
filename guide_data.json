@@ -1,247 +1,206 @@
 {
   "Hunza": {
-    "prices": {
-      "hotel_budget": "1,500-2,500 PKR per night ($5-8 USD)",
-      "meal_local": "300-500 PKR ($1-2 USD)",
-      "guide_daily": "1,500-2,000 PKR ($5-7 USD)",
-      "jeep_rental": "3,000-5,000 PKR per day ($10-17 USD)"
+    "name": "Hunza Valley",
+    "lat": 36.31,
+    "lng": 74.19,
+    "best_season": "May-October",
+    "worst_season": "November-April (heavy snow)",
+    "food_per_meal": {"usd": 3, "pkr": 750},
+    "accommodation": {
+      "budget": {"name": "Guest Houses", "price_usd": 15, "price_pkr": 3750},
+      "mid_range": {"name": "Hotels", "price_usd": 40, "price_pkr": 10000},
+      "luxury": {"name": "Resorts", "price_usd": 80, "price_pkr": 20000}
     },
     "activities": [
-      "Trekking to Passu Cones",
-      "Visit Baltit Fort",
-      "Hiking in Hunza Valley",
-      "Photography at sunrise",
-      "Homestay experiences",
-      "Fruit picking (seasonal)"
+      "Trekking to Khunjerab Pass (China border)",
+      "Visit Attabad Lake",
+      "Explore apricot orchards",
+      "Photography at Eagle's Nest",
+      "Cultural tours with local guides"
     ],
-    "safety_tips": [
-      "Water is safe. Use bottled water if unsure.",
-      "Roads are narrow. Hire experienced drivers.",
-      "Altitude sickness rare. Drink water and rest.",
-      "Crime is very low. Hunza is very safe for tourists.",
-      "Mobile signal available from Zong and Jazz."
+    "group_discounts": {
+      "4-6 people": "10% off accommodation",
+      "7-10 people": "15% off",
+      "2+ weeks": "20% discount on guides"
+    },
+    "restaurants": [
+      {"name": "Mama's Kitchen", "price_pkr": 800, "gps": "36.31, 74.19"},
+      {"name": "Hunza Trout House", "price_pkr": 600, "gps": "36.30, 74.20"}
     ],
-    "discounts": [
-      "Group bookings: 10-15% off guides",
-      "Off-season (Oct-Mar): Hotel prices drop 20%",
-      "Local homestays cheaper than hotels by 30%",
-      "Multi-day treks: 5% discount per extra day"
-    ],
-    "scam_warnings": [
-      "Fake tour operators. Book through verified hotels.",
-      "Overcharging at local shops. Agree on price first.",
-      "Unauthorized guides claim connections. Use official guides.",
-      "Taxi drivers charging double for tourists. Use hotel transport."
-    ]
+    "safety_tips": "Roads are narrow but well maintained. Guides mandatory for high altitude. Water is pure from glaciers.",
+    "scam_warnings": "Avoid unlicensed guides. Always use registered hotels. Don't carry large cash."
   },
   "Skardu": {
-    "prices": {
-      "hotel_budget": "2,000-3,500 PKR per night ($7-12 USD)",
-      "meal_local": "400-600 PKR ($1.50-2 USD)",
-      "guide_daily": "2,000-2,500 PKR ($7-8 USD)",
-      "flight_pakistan_to_skardu": "15,000-20,000 PKR ($50-70 USD)"
+    "name": "Skardu",
+    "lat": 35.30,
+    "lng": 75.57,
+    "best_season": "May-September",
+    "worst_season": "November-March (roads close)",
+    "food_per_meal": {"usd": 3, "pkr": 750},
+    "accommodation": {
+      "budget": {"name": "Budget Hotels", "price_usd": 12, "price_pkr": 3000},
+      "mid_range": {"name": "Mid Hotels", "price_usd": 35, "price_pkr": 8750},
+      "luxury": {"name": "Luxury Resorts", "price_usd": 70, "price_pkr": 17500}
     },
     "activities": [
-      "K2 Base Camp Trek",
-      "Deosai Plains",
-      "Pangong Lake",
-      "Fairy Meadows",
-      "Rock climbing",
-      "Glacier trekking"
+      "Trekking to K2 Base Camp",
+      "Deosai Plains trek",
+      "Shigar Fort visit",
+      "Fishing in glacial lakes",
+      "Polo matches (summer)"
     ],
-    "safety_tips": [
-      "Extreme altitude. Arrive day before trekking.",
-      "Weather changes fast. Pack warm clothes.",
-      "Road to Skardu: dangerous in winter. Check before travel.",
-      "Skardu city is safe. No crime against tourists.",
-      "Medical facilities limited. Travel insurance recommended."
+    "group_discounts": {
+      "5+ people": "12% off guides",
+      "3+ weeks": "25% off accommodation"
+    },
+    "restaurants": [
+      {"name": "Skardu Palace", "price_pkr": 900, "gps": "35.30, 75.57"}
     ],
-    "discounts": [
-      "Off-season treks (May, Sept): 15% cheaper",
-      "Group treks (5+): 10% discount",
-      "Multi-sport packages: 20% off",
-      "Hotel packages: Ask for 3+ night discounts"
-    ],
-    "scam_warnings": [
-      "Flight prices double in summer. Book early.",
-      "Fake trekking companies. Use established agencies.",
-      "Overloaded horses on treks. Complain to guide.",
-      "Some hotels overcharge off-season tourists."
-    ]
+    "safety_tips": "High altitude (2,228m). Acclimatize for 2 days. Guides essential for mountain treks.",
+    "scam_warnings": "Check trek permits. Verify guide credentials. Avoid off-season travel."
   },
   "Swat": {
-    "prices": {
-      "hotel_budget": "1,200-2,000 PKR per night ($4-7 USD)",
-      "meal_local": "250-400 PKR ($0.80-1.50 USD)",
-      "guide_daily": "1,000-1,500 PKR ($3-5 USD)",
-      "transport_minibus": "100-200 PKR per journey ($0.30-0.70 USD)"
+    "name": "Swat Valley",
+    "lat": 34.76,
+    "lng": 72.41,
+    "best_season": "April-October",
+    "worst_season": "December-February (cold)",
+    "food_per_meal": {"usd": 2.5, "pkr": 625},
+    "accommodation": {
+      "budget": {"name": "Guesthouses", "price_usd": 10, "price_pkr": 2500},
+      "mid_range": {"name": "Hotels", "price_usd": 30, "price_pkr": 7500},
+      "luxury": {"name": "Resorts", "price_usd": 60, "price_pkr": 15000}
     },
     "activities": [
-      "Mingora bazaar shopping",
-      "Malam Jabba ski resort",
+      "Trekking to Malam Jabba",
       "White water rafting",
-      "Waterfall hikes",
-      "Historical sites tour",
-      "Local village homestays"
+      "Visit Butkara Stupa",
+      "Photography tours",
+      "Cultural heritage walks"
     ],
-    "safety_tips": [
-      "Swat is now very safe. Check recent news anyway.",
-      "Roads are good. Bus travel is comfortable.",
-      "Locals are friendly. Women solo travelers welcome.",
-      "Hospitals available in Mingora city.",
-      "Mobile signal excellent. Good 4G coverage."
+    "group_discounts": {
+      "3+ people": "8% off",
+      "10+ people": "15% off"
+    },
+    "restaurants": [
+      {"name": "Swat Kitchen", "price_pkr": 500, "gps": "34.76, 72.41"}
     ],
-    "discounts": [
-      "Bus tickets: 10% less than private taxis",
-      "Group visits: 15% off guide fees",
-      "Winter (Dec-Feb): Hotel prices drop 25%",
-      "Ski resort packages: Check for season deals"
-    ],
-    "scam_warnings": [
-      "Taxi drivers may not know meters. Agree on fare first.",
-      "Some guides are unlicensed. Ask for credentials.",
-      "Fake local crafts sold as authentic. Buy from shops.",
-      "Restaurants double-charging some tourists. Ask for menu prices."
-    ]
+    "safety_tips": "Post-2009 valley is very safe. Roads are good. No permits needed.",
+    "scam_warnings": "Use registered guides. Hotels in main towns are reliable. Avoid empty areas at night."
   },
   "Fairy Meadows": {
-    "prices": {
-      "accommodation_tent": "1,000-1,500 PKR per night ($3-5 USD)",
-      "meal_camp": "400-600 PKR ($1.50-2 USD)",
-      "guide_daily": "2,000-3,000 PKR ($7-10 USD)",
-      "porter_daily": "800-1,200 PKR ($3-4 USD)"
+    "name": "Fairy Meadows",
+    "lat": 35.47,
+    "lng": 74.87,
+    "best_season": "July-August",
+    "worst_season": "September-June (snow)",
+    "food_per_meal": {"usd": 4, "pkr": 1000},
+    "accommodation": {
+      "budget": {"name": "Base camp tents", "price_usd": 20, "price_pkr": 5000},
+      "mid_range": {"name": "Lodges", "price_usd": 50, "price_pkr": 12500},
+      "luxury": {"name": "Premium camps", "price_usd": 100, "price_pkr": 25000}
     },
     "activities": [
-      "Nanga Parbat trekking",
-      "Base Camp views",
-      "High altitude camping",
-      "Mountain photography",
-      "Local culture visits",
-      "Adventure climbing"
+      "Nanga Parbat views",
+      "Alpine meadow trekking",
+      "Photography at sunrise",
+      "Mountaineering training"
     ],
-    "safety_tips": [
-      "Extreme altitude. Acclimatize properly.",
-      "Weather is unpredictable. Have backup plans.",
-      "Rescue services limited. Travel insurance mandatory.",
-      "Physical fitness required. Train 2-3 months before.",
-      "Camps have medical kits and oxygen available."
+    "group_discounts": {
+      "4+ climbers": "20% off",
+      "2+ weeks": "30% off total"
+    },
+    "restaurants": [
+      {"name": "Base Camp Cafe", "price_pkr": 700, "gps": "35.47, 74.87"}
     ],
-    "discounts": [
-      "Pre-booking 2+ weeks: 10% discount on camps",
-      "Groups (10+): 15% group rate",
-      "Off-season (early June, late Sept): 20% off",
-      "Multi-trek packages: 12% savings"
-    ],
-    "scam_warnings": [
-      "Some porters demand extra money mid-trek. Agree on rate first.",
-      "Fake camps don't honor reservations. Book with verified operators.",
-      "Equipment rental overcharging. Check quality before paying.",
-      "Guides exaggerating difficulty. Get realistic assessments."
-    ]
+    "safety_tips": "Altitude 4,000m. Acclimatize mandatory. Professional guides required. Porters available.",
+    "scam_warnings": "Book through registered agencies. Verify porter insurance. Check equipment quality."
   },
   "Tharparkar": {
-    "prices": {
-      "hotel_desert": "800-1,500 PKR per night ($3-5 USD)",
-      "meal_local": "200-350 PKR ($0.70-1 USD)",
-      "camel_ride_daily": "1,000-1,500 PKR ($3-5 USD)",
-      "jeep_rental": "2,000-3,000 PKR per day ($7-10 USD)"
+    "name": "Tharparkar Desert",
+    "lat": 24.80,
+    "lng": 71.50,
+    "best_season": "October-March",
+    "worst_season": "May-September (40°C+)",
+    "food_per_meal": {"usd": 2, "pkr": 500},
+    "accommodation": {
+      "budget": {"name": "Desert camps", "price_usd": 8, "price_pkr": 2000},
+      "mid_range": {"name": "Resort camps", "price_usd": 25, "price_pkr": 6250},
+      "luxury": {"name": "Luxury camps", "price_usd": 50, "price_pkr": 12500}
     },
     "activities": [
-      "Camel safaris",
-      "Desert camping",
-      "Sunset viewing",
-      "Local village visits",
-      "Traditional crafts",
-      "Sand dune trekking"
+      "Camel safari",
+      "Desert village tours",
+      "Kolhar Lake visit",
+      "Cultural immersion with Thari people",
+      "Stargazing (zero light pollution)"
     ],
-    "safety_tips": [
-      "Desert is hot. Travel early morning or late evening.",
-      "Water is essential. Carry at least 3L per person.",
-      "Sand storms possible. Cover face and eyes.",
-      "Mobile signal limited. Tell someone your route.",
-      "Local guides know safe routes. Never go alone."
+    "group_discounts": {
+      "3+ days": "15% off camel safari",
+      "5+ people": "20% off camps"
+    },
+    "restaurants": [
+      {"name": "Desert Oasis", "price_pkr": 400, "gps": "24.80, 71.50"}
     ],
-    "discounts": [
-      "Camel rides cheaper with groups (5+)",
-      "Multi-day safaris: 15% discount",
-      "Homestay + safari packages: 20% off",
-      "Winter (Dec-Feb): Prices 30% lower"
-    ],
-    "scam_warnings": [
-      "Some camel owners overcharge tourists. Negotiate price.",
-      "Fake homestays. Use verified operators.",
-      "Overpriced bottled water. Bring your own.",
-      "Tourist police fake ID scam. Be cautious."
-    ]
+    "safety_tips": "Bring sun protection. Carry water always. Respect local customs. Roads are sandy.",
+    "scam_warnings": "Use established safari operators. Avoid unmarked roads. Don't travel alone."
   },
   "Chitral": {
-    "prices": {
-      "hotel_budget": "1,500-2,500 PKR per night ($5-8 USD)",
-      "meal_local": "300-500 PKR ($1-2 USD)",
-      "guide_daily": "1,500-2,000 PKR ($5-7 USD)",
-      "jeep_rental": "2,500-4,000 PKR per day ($8-13 USD)"
+    "name": "Chitral",
+    "lat": 35.85,
+    "lng": 71.80,
+    "best_season": "May-September",
+    "worst_season": "October-April",
+    "food_per_meal": {"usd": 2.5, "pkr": 625},
+    "accommodation": {
+      "budget": {"name": "Guesthouses", "price_usd": 10, "price_pkr": 2500},
+      "mid_range": {"name": "Hotels", "price_usd": 28, "price_pkr": 7000},
+      "luxury": {"name": "Resorts", "price_usd": 55, "price_pkr": 13750}
     },
     "activities": [
-      "Tirich Mir climbing",
-      "Hindu Kush trekking",
-      "Local polo matches",
-      "Kalash culture visit",
-      "Mountain photography",
-      "Valley hiking"
+      "Kalash valleys visit",
+      "Tirich Mir trekking",
+      "Polo in summer",
+      "Cultural tours",
+      "Bird watching"
     ],
-    "safety_tips": [
-      "Remote area. Inform your embassy before travel.",
-      "Weather is extreme. Pack all seasons clothing.",
-      "Medical help is far away. Travel insurance required.",
-      "Roads are narrow and steep. Experienced drivers only.",
-      "Locals are very welcoming and safe for tourists."
+    "group_discounts": {
+      "4+ people": "10% off guides",
+      "Kalash tour package": "20% group rates"
+    },
+    "restaurants": [
+      {"name": "Chitral Palace", "price_pkr": 600, "gps": "35.85, 71.80"}
     ],
-    "discounts": [
-      "Off-season (Oct, Mar-Apr): 20% price drop",
-      "Group treks (5+): 10% discount",
-      "Multi-day packages: Ask for bundle discounts",
-      "Local guesthouses: 15% cheaper than hotels"
-    ],
-    "scam_warnings": [
-      "Some guides lack proper qualifications. Check references.",
-      "Equipment rental overpriced. Compare options.",
-      "Unauthorized jeeps. Use hotel-arranged transport.",
-      "Some shops sell fake Kalash items. Buy from known makers."
-    ]
+    "safety_tips": "Roads are mountain passages. Guides available. Respect Kalash traditions.",
+    "scam_warnings": "Don't overpay for guides. Check hotel reviews. Verify transportation before booking."
   },
   "Kalaam": {
-    "prices": {
-      "hotel_budget": "1,300-2,200 PKR per night ($4-7 USD)",
-      "meal_local": "250-450 PKR ($0.80-1.50 USD)",
-      "guide_daily": "1,200-1,800 PKR ($4-6 USD)",
-      "horse_rental": "1,000-1,500 PKR per day ($3-5 USD)"
+    "name": "Kalaam, Swat",
+    "lat": 34.52,
+    "lng": 72.39,
+    "best_season": "June-September",
+    "worst_season": "November-April (roads close)",
+    "food_per_meal": {"usd": 2, "pkr": 500},
+    "accommodation": {
+      "budget": {"name": "Huts", "price_usd": 12, "price_pkr": 3000},
+      "mid_range": {"name": "Lodges", "price_usd": 28, "price_pkr": 7000},
+      "luxury": {"name": "Resorts", "price_usd": 50, "price_pkr": 12500}
     },
     "activities": [
-      "Ushu forest hiking",
-      "Waterfall trekking",
-      "Mountain lake visits",
-      "Trout fishing",
-      "Photography tours",
-      "Village walks"
+      "Kacura Gali hiking",
+      "River fishing",
+      "Photography",
+      "Village tours",
+      "Strawberry picking (June)"
     ],
-    "safety_tips": [
-      "Kalaam is very safe. Low crime rate.",
-      "Waterfalls are slippery. Wear proper shoes.",
-      "Weather changes quickly. Always carry rain jacket.",
-      "Mobile signal variable. Plan communication before trek.",
-      "Hospitals in nearby towns. Pharmacy available in Kalaam."
+    "group_discounts": {
+      "3+ days": "10% off lodges",
+      "5+ people": "15% off"
+    },
+    "restaurants": [
+      {"name": "Mountain Breeze", "price_pkr": 450, "gps": "34.52, 72.39"}
     ],
-    "discounts": [
-      "Off-season (Dec-Feb): Hotel rates 25% lower",
-      "Group bookings: 10% off",
-      "Multi-day packages: 15% savings",
-      "Combo (hotel+guide+food): 12% discount"
-    ],
-    "scam_warnings": [
-      "Some horse owners overcharge tourists. Negotiate clearly.",
-      "Certain guides demand tips mid-trek. Clarify at start.",
-      "Tourist shops overpricing. Compare prices.",
-      "Fake local honey. Buy from verified sources."
-    ]
+    "safety_tips": "Valley is safe. Roads are winding but good. No special permits needed.",
+    "scam_warnings": "Book lodges in advance. Use recognized guides only. Check road conditions before visiting."
   }
 }
